@@ -1,0 +1,278 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Bucket
+   uuid = "8B2171A0-BC40-4BFE-B38D-904B0DA035D2"
+   type = "1"
+   version = "2.0">
+   <Breakpoints>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "101C930D-62BF-45D5-80D3-B5076906BAF2"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "GitAcademy/Views/RepositoriesViewController.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "33"
+            endingLineNumber = "33"
+            landmarkName = "viewDidLoad()"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "CE9F6027-DDC0-4A70-8B40-EA308222EB91"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "GitAcademy/Views/RepositoriesViewController.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "38"
+            endingLineNumber = "38"
+            landmarkName = "loadRepositories()"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "2531E1CD-5E1C-40D1-A518-30EA70C47B43"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "GitAcademy/Views/RepositoriesViewController.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "44"
+            endingLineNumber = "44"
+            landmarkName = "loadRepositories()"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "4CFDEF8A-5D18-4011-A871-7B80D650EB34"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "GitAcademy/Views/RepositoriesViewController.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "12"
+            endingLineNumber = "12"
+            landmarkName = "RepositoriesViewController"
+            landmarkType = "3">
+            <Locations>
+               <Location
+                  uuid = "4CFDEF8A-5D18-4011-A871-7B80D650EB34 - 853c077ff4a64821"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "GitAcademy.RepositoriesViewController.repositories.getter : Swift.Array&lt;GitAcademy.Repository&gt;"
+                  moduleName = "GitAcademy"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/arvydas/Desktop/GitAcademy/GitAcademy/Views/RepositoriesViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "12"
+                  endingLineNumber = "12"
+                  offsetFromSymbolStart = "122">
+               </Location>
+               <Location
+                  uuid = "4CFDEF8A-5D18-4011-A871-7B80D650EB34 - f18ec6d23cc45035"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "GitAcademy.RepositoriesViewController.repositories.setter : Swift.Array&lt;GitAcademy.Repository&gt;"
+                  moduleName = "GitAcademy"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/arvydas/Desktop/GitAcademy/GitAcademy/Views/RepositoriesViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "12"
+                  endingLineNumber = "12"
+                  offsetFromSymbolStart = "148">
+               </Location>
+               <Location
+                  uuid = "4CFDEF8A-5D18-4011-A871-7B80D650EB34 - f24c4e22e23238a8"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "GitAcademy.RepositoriesViewController.repositories.modify : Swift.Array&lt;GitAcademy.Repository&gt;"
+                  moduleName = "GitAcademy"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/arvydas/Desktop/GitAcademy/GitAcademy/Views/RepositoriesViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "0"
+                  endingLineNumber = "0"
+                  offsetFromSymbolStart = "18">
+               </Location>
+               <Location
+                  uuid = "4CFDEF8A-5D18-4011-A871-7B80D650EB34 - d63c4768aa532765"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "GitAcademy.RepositoriesViewController.repositories.modify : Swift.Array&lt;GitAcademy.Repository&gt; with unmangled suffix &quot;.resume.0&quot;"
+                  moduleName = "GitAcademy"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/arvydas/Desktop/GitAcademy/GitAcademy/Views/RepositoriesViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "12"
+                  endingLineNumber = "12"
+                  offsetFromSymbolStart = "8">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "E0FA57AF-98E9-45F2-8932-8BFD4448ED50"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "GitAcademy/Views/RepositoriesViewController.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "15"
+            endingLineNumber = "15"
+            landmarkName = "init()"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "E0FA57AF-98E9-45F2-8932-8BFD4448ED50 - ca9d8e11acd1c54c"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "GitAcademy.RepositoriesViewController.__allocating_init() -&gt; GitAcademy.RepositoriesViewController"
+                  moduleName = "GitAcademy"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/arvydas/Desktop/GitAcademy/GitAcademy/Views/RepositoriesViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "0"
+                  endingLineNumber = "0"
+                  offsetFromSymbolStart = "4">
+               </Location>
+               <Location
+                  uuid = "E0FA57AF-98E9-45F2-8932-8BFD4448ED50 - 2783e58d51256b42"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "GitAcademy.RepositoriesViewController.init() -&gt; GitAcademy.RepositoriesViewController"
+                  moduleName = "GitAcademy"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/arvydas/Desktop/GitAcademy/GitAcademy/Views/RepositoriesViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "12"
+                  endingLineNumber = "12"
+                  offsetFromSymbolStart = "100">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "83B4B862-946F-48FB-837D-0CCA79C1FE0D"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "GitAcademy/Views/RepositoriesViewController.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "21"
+            endingLineNumber = "21"
+            landmarkName = "init(repositories:username:)"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "83B4B862-946F-48FB-837D-0CCA79C1FE0D - 21ac29e1e00b464c"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "GitAcademy.RepositoriesViewController.__allocating_init(repositories: Swift.Array&lt;GitAcademy.Repository&gt;, username: Swift.String) -&gt; GitAcademy.RepositoriesViewController"
+                  moduleName = "GitAcademy"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/arvydas/Desktop/GitAcademy/GitAcademy/Views/RepositoriesViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "0"
+                  endingLineNumber = "0"
+                  offsetFromSymbolStart = "14">
+               </Location>
+               <Location
+                  uuid = "83B4B862-946F-48FB-837D-0CCA79C1FE0D - e85dd68790f3f470"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "GitAcademy.RepositoriesViewController.init(repositories: Swift.Array&lt;GitAcademy.Repository&gt;, username: Swift.String) -&gt; GitAcademy.RepositoriesViewController"
+                  moduleName = "GitAcademy"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/arvydas/Desktop/GitAcademy/GitAcademy/Views/RepositoriesViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "12"
+                  endingLineNumber = "12"
+                  offsetFromSymbolStart = "114">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "0CE1BE82-7ADB-4FB5-AF25-0E9A3A852EEA"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "GitAcademy/Views/RepositoriesViewController.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "27"
+            endingLineNumber = "27"
+            landmarkName = "init(coder:)"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "0CE1BE82-7ADB-4FB5-AF25-0E9A3A852EEA - 3112872447666428"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "GitAcademy.RepositoriesViewController.__allocating_init(coder: __C.NSCoder) -&gt; Swift.Optional&lt;GitAcademy.RepositoriesViewController&gt;"
+                  moduleName = "GitAcademy"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/arvydas/Desktop/GitAcademy/GitAcademy/Views/RepositoriesViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "0"
+                  endingLineNumber = "0"
+                  offsetFromSymbolStart = "12">
+               </Location>
+               <Location
+                  uuid = "0CE1BE82-7ADB-4FB5-AF25-0E9A3A852EEA - 510c6bd34f5e49e1"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "GitAcademy.RepositoriesViewController.init(coder: __C.NSCoder) -&gt; Swift.Optional&lt;GitAcademy.RepositoriesViewController&gt;"
+                  moduleName = "GitAcademy"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/arvydas/Desktop/GitAcademy/GitAcademy/Views/RepositoriesViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "12"
+                  endingLineNumber = "12"
+                  offsetFromSymbolStart = "106">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+   </Breakpoints>
+</Bucket>
