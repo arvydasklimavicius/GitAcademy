@@ -1,33 +1,17 @@
 //
-//  ViewController.swift
+//  ViewModel.swift
 //  GitAcademy
 //
-//  Created by Arvydas Klimavicius on 2021-06-17.
+//  Created by Arvydas Klimavicius on 2021-07-07.
 //
 
-import UIKit
+import Foundation
 import AuthenticationServices
 
-class ViewController: UIViewController {
+class ViewModel: NSObject {
     
-    
-    var isShowingRepositoriesView = false
-    var repositories: [Repository] = []
-    var userName: String = ""
-    
-    
-    @IBOutlet weak var githubLoginButton: UIButton!
-    
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        // Do any additional setup after loading the view.
-    }
+    weak var coordinator: Coordinator?
 
-
-    @IBAction func loginButtonTapped(_ sender: Any) {
-        loginTapped()
-    }
-    
     func loginTapped() {
         guard let loginURL = NetworkRequest.RequestType.login.networkRequest()?.url else {
             print("🔴 Can't create login URL")
@@ -63,6 +47,9 @@ class ViewController: UIViewController {
             print("🔴 Failed to start ASWebAuthenticationSession")
         }
     }
+}
+
+extension ViewModel {
     
     private func getUser() {
         NetworkRequest.RequestType.getUser.networkRequest()?.start(responseType: User.self, completionHandler: { [weak self] result in
@@ -70,11 +57,14 @@ class ViewController: UIViewController {
             case .success(let networkResponse):
                 DispatchQueue.main.async {
                     let user = networkResponse.object
-                    self?.userName = user.name
-                    self?.isShowingRepositoriesView = true
+                    //                    self?.userName = user.name
+                    //                    self?.login = user.login
+                    //                    self?.isShowingRepositoriesView = true
                     self?.loadRepositories()
-                    self?.showHomeScreen()
+                    self?.coordinator?.start()
+//                    self?.showHomeScreen()
                     print("🟢 Login name: \(user.login) User name: \(user.name)")
+                    print("\(user)")
                 }
             case .failure(let error):
                 print(" 🔴Failed to get user \(error.localizedDescription)")
@@ -87,8 +77,10 @@ class ViewController: UIViewController {
             switch result {
             case .success(let networkResponse):
                 DispatchQueue.main.async {
-                    self?.repositories = networkResponse.object
-                    self?.printRepo()
+//                    self?.repositories = networkResponse.object
+                    let repositories = networkResponse.object
+//                    self?.printRepo()
+                    print(repositories)
                 }
             case .failure(let error):
                 print("🔴 Error to get repositories \(error)")
@@ -96,27 +88,26 @@ class ViewController: UIViewController {
         })
     }
     
-    func printRepo() {
-        print("start printing repo")
-        for (index, repository) in repositories.enumerated() {
-            print("🔸 \(index) \(repository.name) \(repository.id)")
-        }
-    }
+//    func printRepo() {
+//        print("start printing repo")
+//        for (index, repository) in repositories.enumerated() {
+//            print("🔸 \(index) \(repository.name) \(repository.id)")
+//        }
+//    }
     
     func showHomeScreen() {
-        let vc = storyboard?.instantiateViewController(identifier: "Home") as! HomeViewController
-        vc.user = userName
-        vc.modalPresentationStyle = .fullScreen
-        present(vc, animated: true, completion: nil)
+//        let vc = storyboard?.instantiateViewController(identifier: "Home") as! HomeViewController
+//        vc.user = userName
+//        vc.login = login
+//        vc.modalPresentationStyle = .fullScreen
+//        present(vc, animated: true, completion: nil)
         
-//        let homeVC = HomeViewController()
-//        homeVC.user = userName
-//        navigationController?.pushViewController(homeVC, animated: true)
-
+        
     }
+        
 }
 
-extension ViewController: ASWebAuthenticationPresentationContextProviding {
+extension ViewModel: ASWebAuthenticationPresentationContextProviding {
     
     func presentationAnchor(for session: ASWebAuthenticationSession) -> ASPresentationAnchor {
         let window = UIApplication.shared.windows.first {$0.isKeyWindow}
