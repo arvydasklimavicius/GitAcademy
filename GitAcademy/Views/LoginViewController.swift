@@ -8,10 +8,14 @@
 import UIKit
 import AuthenticationServices
 
-class ViewController: UIViewController {
+class LoginViewController: UIViewController {
     
     private let viewModel = ViewModel()
+    private let userViewModel = UserViewModel()
+    private let loginViewModel = LoginViewModel()
     
+    let loginCoordinator = Coordinator()
+    weak var coordinator: Coordinator?
     
     var isShowingRepositoriesView = false
     var repositories: [Repository] = []
@@ -19,20 +23,31 @@ class ViewController: UIViewController {
     var login: String = ""
     
     
-    
+    @IBOutlet weak var activityIndicator: UIActivityIndicatorView!
     @IBOutlet weak var githubLoginButton: UIButton!
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        coordinator = loginCoordinator
+        setupUI()
+        
+        userViewModel.userFetchCompletion = { [weak self] in
+            guard let strongSelf = self else { return }
+            strongSelf.coordinator?.startHomeViewController(with: strongSelf.userViewModel, rootVC: strongSelf)
+        }
     }
-
-
+    
+    
     @IBAction func loginButtonTapped(_ sender: Any) {
-        loginTapped()
 //        viewModel.loginTapped()
+//        userViewModel.start()
+        loginViewModel.loginTapped()
+
     }
     
     func loginTapped() {
+        activityIndicator.isHidden = false
+        activityIndicator.startAnimating()
         guard let loginURL = NetworkRequest.RequestType.login.networkRequest()?.url else {
             print("🔴 Can't create login URL")
             return
@@ -54,7 +69,7 @@ class ViewController: UIViewController {
             networkRequest.start(responseType: String.self) { result in
                 switch result {
                 case .success:
-                    self?.getUser()
+                    self?.userViewModel.start()
                 case .failure(let error):
                     print("🔴 Failed to exchange token \(error)")
                 }
@@ -66,26 +81,6 @@ class ViewController: UIViewController {
         if !authenticationServices.start() {
             print("🔴 Failed to start ASWebAuthenticationSession")
         }
-    }
-    
-    private func getUser() {
-        NetworkRequest.RequestType.getUser.networkRequest()?.start(responseType: User.self, completionHandler: { [weak self] result in
-            switch result {
-            case .success(let networkResponse):
-                DispatchQueue.main.async {
-                    let user = networkResponse.object
-                    self?.userName = user.name
-                    self?.login = user.login
-                    self?.isShowingRepositoriesView = true
-                    self?.loadRepositories()
-                    self?.showHomeScreen()
-                    print("🟢 Login name: \(user.login) User name: \(user.name)")
-                    print("\(user)")
-                }
-            case .failure(let error):
-                print(" 🔴Failed to get user \(error.localizedDescription)")
-            }
-        })
     }
     
     private func loadRepositories() {
@@ -109,27 +104,20 @@ class ViewController: UIViewController {
         }
     }
     
-    func showHomeScreen() {
-        let vc = storyboard?.instantiateViewController(identifier: "Home") as! HomeViewController
-        vc.user = userName
-        vc.login = login
-        vc.modalPresentationStyle = .fullScreen
-        present(vc, animated: true, completion: nil)
-       
-        
-//        let homeVC = HomeViewController()
-//        homeVC.user = userName
-//        homeVC.modalPresentationStyle = .fullScreen
-//        navigationController?.pushViewController(homeVC, animated: true)
-//        navigationController?.present(homeVC, animated: true, completion: nil)
-
+    func setupUI() {
+        githubLoginButton.layer.borderColor = UIColor.white.cgColor
+        githubLoginButton.layer.borderWidth = 1
+        githubLoginButton.layer.cornerRadius = 8
+        activityIndicator.isHidden = true
     }
 }
 
-extension ViewController: ASWebAuthenticationPresentationContextProviding {
+extension LoginViewController: ASWebAuthenticationPresentationContextProviding {
     
     func presentationAnchor(for session: ASWebAuthenticationSession) -> ASPresentationAnchor {
         let window = UIApplication.shared.windows.first {$0.isKeyWindow}
+        activityIndicator.stopAnimating()
+        activityIndicator.isHidden = true
         return window ?? ASPresentationAnchor()
     }
 }

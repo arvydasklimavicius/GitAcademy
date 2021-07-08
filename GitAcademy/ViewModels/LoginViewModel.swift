@@ -1,15 +1,16 @@
 //
-//  ViewModel.swift
+//  LoginViewModel.swift
 //  GitAcademy
 //
-//  Created by Arvydas Klimavicius on 2021-07-07.
+//  Created by Arvydas Klimavicius on 2021-07-08.
 //
 
 import Foundation
 import AuthenticationServices
 
-class ViewModel: NSObject {
+final class LoginViewModel: NSObject {
     
+    private let userViewModel = UserViewModel()
     weak var coordinator: Coordinator?
     
     func loginTapped() {
@@ -34,7 +35,9 @@ class ViewModel: NSObject {
             networkRequest.start(responseType: String.self) { result in
                 switch result {
                 case .success:
-                    self?.getUser()
+                    self?.userViewModel.start()
+                    //TO DO need to show home vc...
+                    self?.coordinator?.start()
                 case .failure(let error):
                     print("🔴 Failed to exchange token \(error)")
                 }
@@ -47,47 +50,13 @@ class ViewModel: NSObject {
             print("🔴 Failed to start ASWebAuthenticationSession")
         }
     }
+    
 }
 
-extension ViewModel {
-    
-    private func getUser() {
-        NetworkRequest.RequestType.getUser.networkRequest()?.start(responseType: User.self, completionHandler: { [weak self] result in
-            switch result {
-            case .success(let networkResponse):
-                DispatchQueue.main.async {
-                    let user = networkResponse.object
-                    self?.loadRepositories()
-                    self?.coordinator?.start()
-                    print("🟢 Login name: \(user.login) User name: \(user.name)")
-                    print("\(user)")
-                }
-            case .failure(let error):
-                print(" 🔴Failed to get user \(error.localizedDescription)")
-            }
-        })
-    }
-    
-    private func loadRepositories() {
-        NetworkRequest.RequestType.getRepositories.networkRequest()?.start(responseType: [Repository].self, completionHandler: { [weak self] result in
-            switch result {
-            case .success(let networkResponse):
-                DispatchQueue.main.async {
-                    let repositories = networkResponse.object
-                    print(repositories)
-                }
-            case .failure(let error):
-                print("🔴 Error to get repositories \(error)")
-            }
-        })
-    }
-}
-
-extension ViewModel: ASWebAuthenticationPresentationContextProviding {
+extension LoginViewModel: ASWebAuthenticationPresentationContextProviding {
     
     func presentationAnchor(for session: ASWebAuthenticationSession) -> ASPresentationAnchor {
         let window = UIApplication.shared.windows.first {$0.isKeyWindow}
         return window ?? ASPresentationAnchor()
     }
 }
-
