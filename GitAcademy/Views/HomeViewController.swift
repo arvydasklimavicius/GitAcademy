@@ -11,8 +11,19 @@ class HomeViewController: UIViewController, Storyboarded {
     
     weak var coordinator: Coordinator?
     
-    var user: String? = ""
-    var login: String? = ""
+    var user: String? {
+        didSet {
+            nameLabel.text = user 
+        }
+    }
+    
+    var login: String? {
+        didSet {
+            loginLabel.text = login
+        }
+    }
+    
+    var userViewModel: UserViewModel?
     
 
 
@@ -26,6 +37,12 @@ class HomeViewController: UIViewController, Storyboarded {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        userViewModel?.userFetchCompletion = { [weak self] in
+            guard let strongSelf = self else { return }
+            strongSelf.user = strongSelf.userViewModel?.getUsername()
+            strongSelf.login = strongSelf.userViewModel?.getLogin()
+        }
+        userViewModel?.start()
         setupUI()
   
     }
@@ -34,11 +51,14 @@ class HomeViewController: UIViewController, Storyboarded {
         
         viewContainer.layer.cornerRadius = 8
         viewContainer.backgroundColor = .lightGray
+        viewContainer.layer.borderColor = UIColor.white.cgColor
+        viewContainer.layer.borderWidth = 1
+        viewContainer.backgroundColor = .black
         profileImage.layer.cornerRadius = profileImage.frame.height / 2
-        profileImage.backgroundColor = .red
-        nameLabel.text = user
-        loginLabel.text = login
-        
+        profileImage.backgroundColor = .darkGray
+        profileImage.layer.borderColor = UIColor.white.cgColor
+        profileImage.layer.borderWidth = 1
+
     }
 
 

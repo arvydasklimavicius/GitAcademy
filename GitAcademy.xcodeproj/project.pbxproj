@@ -24,7 +24,6 @@
 		CECA3A8C267B9D9700AAA173 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CECA3A8A267B9D9700AAA173 /* LaunchScreen.storyboard */; };
 		CECA3A97267B9D9700AAA173 /* GitAcademyTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CECA3A96267B9D9700AAA173 /* GitAcademyTests.swift */; };
 		CECA3AA2267B9D9700AAA173 /* GitAcademyUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CECA3AA1267B9D9700AAA173 /* GitAcademyUITests.swift */; };
-		CECA3AB22682414100AAA173 /* GitHubAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = CECA3AB12682414100AAA173 /* GitHubAPI.swift */; };
 		CECA3AB4268758F200AAA173 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CECA3AB3268758F200AAA173 /* HomeViewController.swift */; };
 		CECA3AB9268E0E5200AAA173 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = CECA3AB8268E0E5200AAA173 /* User.swift */; };
 		CECA3ABB268E0EBE00AAA173 /* Repository.swift in Sources */ = {isa = PBXBuildFile; fileRef = CECA3ABA268E0EBE00AAA173 /* Repository.swift */; };
@@ -71,7 +70,6 @@
 		CECA3A9D267B9D9700AAA173 /* GitAcademyUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = GitAcademyUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		CECA3AA1267B9D9700AAA173 /* GitAcademyUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GitAcademyUITests.swift; sourceTree = "<group>"; };
 		CECA3AA3267B9D9700AAA173 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		CECA3AB12682414100AAA173 /* GitHubAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GitHubAPI.swift; sourceTree = "<group>"; };
 		CECA3AB3268758F200AAA173 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		CECA3AB8268E0E5200AAA173 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		CECA3ABA268E0EBE00AAA173 /* Repository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Repository.swift; sourceTree = "<group>"; };
@@ -121,14 +119,6 @@
 			path = Views;
 			sourceTree = "<group>";
 		};
-		CE78815D2694D50100CB42F7 /* ToDelete */ = {
-			isa = PBXGroup;
-			children = (
-				CECA3AB12682414100AAA173 /* GitHubAPI.swift */,
-			);
-			path = ToDelete;
-			sourceTree = "<group>";
-		};
 		CE78815E2694D53200CB42F7 /* Storage */ = {
 			isa = PBXGroup;
 			children = (
@@ -141,11 +131,18 @@
 			isa = PBXGroup;
 			children = (
 				CE788160269607CD00CB42F7 /* ViewModel.swift */,
-				CE788162269618A100CB42F7 /* Coordinator.swift */,
 				CE7881642697566E00CB42F7 /* UserViewModel.swift */,
 				CE7881662697650400CB42F7 /* LoginViewModel.swift */,
 			);
 			path = ViewModels;
+			sourceTree = "<group>";
+		};
+		CE78816826977CF200CB42F7 /* Coordinator */ = {
+			isa = PBXGroup;
+			children = (
+				CE788162269618A100CB42F7 /* Coordinator.swift */,
+			);
+			path = Coordinator;
 			sourceTree = "<group>";
 		};
 		CECA3A70267B9D8400AAA173 = {
@@ -171,8 +168,8 @@
 		CECA3A7B267B9D8400AAA173 /* GitAcademy */ = {
 			isa = PBXGroup;
 			children = (
+				CE78816826977CF200CB42F7 /* Coordinator */,
 				CE78815F269607BC00CB42F7 /* ViewModels */,
-				CE78815D2694D50100CB42F7 /* ToDelete */,
 				CE78815A2691D38700CB42F7 /* Views */,
 				CE788153268E123F00CB42F7 /* Networking */,
 				CECA3AB7268E0E4000AAA173 /* Model */,
@@ -358,7 +355,6 @@
 				CE788157268E1F7900CB42F7 /* NetworkRequest+User.swift in Sources */,
 				CECA3ABB268E0EBE00AAA173 /* Repository.swift in Sources */,
 				CECA3AB4268758F200AAA173 /* HomeViewController.swift in Sources */,
-				CECA3AB22682414100AAA173 /* GitHubAPI.swift in Sources */,
 				CE7881652697566E00CB42F7 /* UserViewModel.swift in Sources */,
 				CE78815C2694B38000CB42F7 /* UserProfile.swift in Sources */,
 			);

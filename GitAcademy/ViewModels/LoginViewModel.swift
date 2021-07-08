@@ -10,8 +10,9 @@ import AuthenticationServices
 
 final class LoginViewModel: NSObject {
     
-    private let userViewModel = UserViewModel()
-    weak var coordinator: Coordinator?
+//    private let userViewModel = UserViewModel()
+    
+    var completion: (() -> Void)?
     
     func loginTapped() {
         guard let loginURL = NetworkRequest.RequestType.login.networkRequest()?.url else {
@@ -35,9 +36,9 @@ final class LoginViewModel: NSObject {
             networkRequest.start(responseType: String.self) { result in
                 switch result {
                 case .success:
-                    self?.userViewModel.start()
+                    self?.completion?()
+//                    self?.userViewModel.start()
                     //TO DO need to show home vc...
-                    self?.coordinator?.start()
                 case .failure(let error):
                     print("🔴 Failed to exchange token \(error)")
                 }

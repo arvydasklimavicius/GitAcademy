@@ -18,10 +18,12 @@ class Coordinator {
         vc.coordinator = self
     }
     
-    func startHomeViewController(with viewModel: UserViewModel, rootVC: UIViewController) {
+    func startHomeViewController(rootVC: UIViewController) {
         let vc = HomeViewController.instantiate()
-        vc.user = viewModel.getUsername()
-        vc.login = viewModel.getLogin()
+//        vc.user = viewModel.getUsername()
+//        vc.login = viewModel.getLogin()
+        let userViewModel = UserViewModel()
+        vc.userViewModel = userViewModel
         vc.modalPresentationStyle = .fullScreen
         rootVC.present(vc, animated: true, completion: nil)
     }

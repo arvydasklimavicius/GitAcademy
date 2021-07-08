@@ -79,6 +79,9 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" alpha="0.90000000000000002" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Gradient" translatesAutoresizingMaskIntoConstraints="NO" id="Ras-Bd-Jtr">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                            </imageView>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="jZX-Eo-xaq">
                                 <rect key="frame" x="8" y="62" width="398" height="200"/>
                                 <subviews>
@@ -95,13 +98,13 @@
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HTE-8r-4qf">
                                                 <rect key="frame" x="0.0" y="0.0" width="274" height="31.5"/>
                                                 <fontDescription key="fontDescription" name="Avenir-Heavy" family="Avenir" pointSize="23"/>
-                                                <nil key="textColor"/>
+                                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tAp-C6-ven">
                                                 <rect key="frame" x="0.0" y="39.5" width="274" height="23.5"/>
                                                 <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="17"/>
-                                                <nil key="textColor"/>
+                                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                         </subviews>
@@ -121,13 +124,13 @@
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gmj-TH-sgf">
                                                         <rect key="frame" x="0.0" y="0.0" width="10.5" height="30"/>
                                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                        <nil key="textColor"/>
+                                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ofJ-I5-d5r">
                                                         <rect key="frame" x="18.5" y="0.0" width="65" height="30"/>
                                                         <state key="normal" title="Following">
-                                                            <color key="titleColor" systemColor="labelColor"/>
+                                                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         </state>
                                                     </button>
                                                 </subviews>
@@ -138,13 +141,13 @@
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kql-FM-dS7">
                                                         <rect key="frame" x="0.0" y="0.0" width="10.5" height="30"/>
                                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                        <nil key="textColor"/>
+                                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lq1-ES-wiA">
                                                         <rect key="frame" x="18.5" y="0.0" width="65" height="30"/>
                                                         <state key="normal" title="Followers">
-                                                            <color key="titleColor" systemColor="labelColor"/>
+                                                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         </state>
                                                     </button>
                                                 </subviews>
@@ -152,7 +155,7 @@
                                         </subviews>
                                     </stackView>
                                 </subviews>
-                                <color key="backgroundColor" systemColor="systemGrayColor"/>
+                                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
                                     <constraint firstAttribute="trailing" secondItem="ZAE-3M-tIo" secondAttribute="trailing" constant="8" id="73b-EW-rXW"/>
                                     <constraint firstItem="x7L-wQ-YvT" firstAttribute="top" secondItem="jZX-Eo-xaq" secondAttribute="top" constant="8" id="Mdj-XF-pxd"/>
@@ -164,21 +167,17 @@
                                     <constraint firstItem="ZAE-3M-tIo" firstAttribute="centerY" secondItem="x7L-wQ-YvT" secondAttribute="centerY" id="yKX-y2-749"/>
                                 </constraints>
                             </view>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="AgO-4x-8Me">
-                                <rect key="frame" x="8" y="286" width="398" height="552"/>
-                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                            </tableView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="OVJ-Ka-PBQ"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="jZX-Eo-xaq" firstAttribute="leading" secondItem="OVJ-Ka-PBQ" secondAttribute="leading" constant="8" id="0VG-xQ-rin"/>
                             <constraint firstItem="jZX-Eo-xaq" firstAttribute="top" secondItem="OVJ-Ka-PBQ" secondAttribute="top" constant="18" id="1oY-0i-MMa"/>
-                            <constraint firstItem="AgO-4x-8Me" firstAttribute="leading" secondItem="OVJ-Ka-PBQ" secondAttribute="leading" constant="8" id="Jx0-6h-nvb"/>
-                            <constraint firstItem="OVJ-Ka-PBQ" firstAttribute="bottom" secondItem="AgO-4x-8Me" secondAttribute="bottom" constant="24" id="PWk-fb-HyV"/>
+                            <constraint firstItem="Ras-Bd-Jtr" firstAttribute="trailing" secondItem="OVJ-Ka-PBQ" secondAttribute="trailing" id="I2m-KQ-DDd"/>
                             <constraint firstItem="OVJ-Ka-PBQ" firstAttribute="trailing" secondItem="jZX-Eo-xaq" secondAttribute="trailing" constant="8" id="Qug-NV-pWo"/>
-                            <constraint firstItem="AgO-4x-8Me" firstAttribute="top" secondItem="jZX-Eo-xaq" secondAttribute="bottom" constant="24" id="WDI-vh-y7W"/>
-                            <constraint firstItem="OVJ-Ka-PBQ" firstAttribute="trailing" secondItem="AgO-4x-8Me" secondAttribute="trailing" constant="8" id="fta-O7-qgD"/>
+                            <constraint firstItem="Ras-Bd-Jtr" firstAttribute="leading" secondItem="OVJ-Ka-PBQ" secondAttribute="leading" id="eJ1-TG-Kfc"/>
+                            <constraint firstItem="Ras-Bd-Jtr" firstAttribute="bottom" secondItem="UEx-cq-TV3" secondAttribute="bottom" id="mkp-Aa-Pgw"/>
+                            <constraint firstItem="Ras-Bd-Jtr" firstAttribute="top" secondItem="UEx-cq-TV3" secondAttribute="top" id="zGY-IO-I5Z"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="sAT-v0-Eob"/>
@@ -217,9 +216,6 @@
         </systemColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-        </systemColor>
-        <systemColor name="systemGrayColor">
-            <color red="0.55686274509803924" green="0.55686274509803924" blue="0.57647058823529407" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
         <systemColor name="systemGreenColor">
             <color red="0.20392156862745098" green="0.7803921568627451" blue="0.34901960784313724" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
