@@ -23,11 +23,22 @@ class HomeViewController: UIViewController, Storyboarded {
         }
     }
     
+    var following: Int? {
+        didSet {
+            followingLabel.text = "\(following ?? 0)"
+        }
+    }
+    
+    var followers: Int? {
+        didSet {
+            followersLabel.text = "\(followers ?? 0)"
+        }
+    }
+    
     var userViewModel: UserViewModel?
     
-
-
-
+    @IBOutlet weak var followersLabel: UILabel!
+    @IBOutlet weak var followingLabel: UILabel!
     @IBOutlet weak var viewContainer: UIView!
     @IBOutlet weak var nameLabel: UILabel!
     @IBOutlet weak var loginLabel: UILabel!
@@ -41,10 +52,12 @@ class HomeViewController: UIViewController, Storyboarded {
             guard let strongSelf = self else { return }
             strongSelf.user = strongSelf.userViewModel?.getUsername()
             strongSelf.login = strongSelf.userViewModel?.getLogin()
+            strongSelf.followers = strongSelf.userViewModel?.getFollowers()
+            strongSelf.following = strongSelf.userViewModel?.getFollowing()
         }
         userViewModel?.start()
         setupUI()
-  
+        
     }
     
     func setupUI() {
@@ -54,12 +67,13 @@ class HomeViewController: UIViewController, Storyboarded {
         viewContainer.layer.borderColor = UIColor.white.cgColor
         viewContainer.layer.borderWidth = 1
         viewContainer.backgroundColor = .black
+        
         profileImage.layer.cornerRadius = profileImage.frame.height / 2
         profileImage.backgroundColor = .darkGray
         profileImage.layer.borderColor = UIColor.white.cgColor
         profileImage.layer.borderWidth = 1
-
+        
     }
-
-
+    
+    
 }

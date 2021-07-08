@@ -31,7 +31,7 @@ class RepositoriesViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         loadRepositories()
-
+        
         
     }
     
@@ -49,5 +49,5 @@ class RepositoriesViewController: UIViewController {
         })
     }
     
-
+    
 }

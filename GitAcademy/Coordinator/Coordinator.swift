@@ -20,8 +20,6 @@ class Coordinator {
     
     func startHomeViewController(rootVC: UIViewController) {
         let vc = HomeViewController.instantiate()
-//        vc.user = viewModel.getUsername()
-//        vc.login = viewModel.getLogin()
         let userViewModel = UserViewModel()
         vc.userViewModel = userViewModel
         vc.modalPresentationStyle = .fullScreen
@@ -33,6 +31,8 @@ class Coordinator {
     }
     
 }
+
+//MARK: - Coordinator extension for storyboards
 
 extension Storyboarded where Self: UIViewController {
     static func instantiate() -> Self {

@@ -10,11 +10,10 @@
 		CE788155268E127E00CB42F7 /* NetworkRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE788154268E127E00CB42F7 /* NetworkRequest.swift */; };
 		CE788157268E1F7900CB42F7 /* NetworkRequest+User.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE788156268E1F7900CB42F7 /* NetworkRequest+User.swift */; };
 		CE7881592691D37D00CB42F7 /* RepositoriesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE7881582691D37D00CB42F7 /* RepositoriesViewController.swift */; };
-		CE78815C2694B38000CB42F7 /* UserProfile.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE78815B2694B38000CB42F7 /* UserProfile.swift */; };
-		CE788161269607CD00CB42F7 /* ViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE788160269607CD00CB42F7 /* ViewModel.swift */; };
 		CE788163269618A100CB42F7 /* Coordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE788162269618A100CB42F7 /* Coordinator.swift */; };
 		CE7881652697566E00CB42F7 /* UserViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE7881642697566E00CB42F7 /* UserViewModel.swift */; };
 		CE7881672697650400CB42F7 /* LoginViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE7881662697650400CB42F7 /* LoginViewModel.swift */; };
+		CE78816A269788E700CB42F7 /* RepositoriesViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE788169269788E700CB42F7 /* RepositoriesViewModel.swift */; };
 		CECA3A7D267B9D8400AAA173 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CECA3A7C267B9D8400AAA173 /* AppDelegate.swift */; };
 		CECA3A7F267B9D8400AAA173 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CECA3A7E267B9D8400AAA173 /* SceneDelegate.swift */; };
 		CECA3A81267B9D8400AAA173 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CECA3A80267B9D8400AAA173 /* LoginViewController.swift */; };
@@ -50,11 +49,10 @@
 		CE788154268E127E00CB42F7 /* NetworkRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkRequest.swift; sourceTree = "<group>"; };
 		CE788156268E1F7900CB42F7 /* NetworkRequest+User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NetworkRequest+User.swift"; sourceTree = "<group>"; };
 		CE7881582691D37D00CB42F7 /* RepositoriesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepositoriesViewController.swift; sourceTree = "<group>"; };
-		CE78815B2694B38000CB42F7 /* UserProfile.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserProfile.swift; sourceTree = "<group>"; };
-		CE788160269607CD00CB42F7 /* ViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewModel.swift; sourceTree = "<group>"; };
 		CE788162269618A100CB42F7 /* Coordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Coordinator.swift; sourceTree = "<group>"; };
 		CE7881642697566E00CB42F7 /* UserViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserViewModel.swift; sourceTree = "<group>"; };
 		CE7881662697650400CB42F7 /* LoginViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewModel.swift; sourceTree = "<group>"; };
+		CE788169269788E700CB42F7 /* RepositoriesViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepositoriesViewModel.swift; sourceTree = "<group>"; };
 		CECA3A79267B9D8400AAA173 /* GitAcademy.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GitAcademy.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CECA3A7C267B9D8400AAA173 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		CECA3A7E267B9D8400AAA173 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -130,9 +128,9 @@
 		CE78815F269607BC00CB42F7 /* ViewModels */ = {
 			isa = PBXGroup;
 			children = (
-				CE788160269607CD00CB42F7 /* ViewModel.swift */,
 				CE7881642697566E00CB42F7 /* UserViewModel.swift */,
 				CE7881662697650400CB42F7 /* LoginViewModel.swift */,
+				CE788169269788E700CB42F7 /* RepositoriesViewModel.swift */,
 			);
 			path = ViewModels;
 			sourceTree = "<group>";
@@ -207,7 +205,6 @@
 			children = (
 				CECA3AB8268E0E5200AAA173 /* User.swift */,
 				CECA3ABA268E0EBE00AAA173 /* Repository.swift */,
-				CE78815B2694B38000CB42F7 /* UserProfile.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -349,14 +346,13 @@
 				CE7881672697650400CB42F7 /* LoginViewModel.swift in Sources */,
 				CE7881592691D37D00CB42F7 /* RepositoriesViewController.swift in Sources */,
 				CE788155268E127E00CB42F7 /* NetworkRequest.swift in Sources */,
-				CE788161269607CD00CB42F7 /* ViewModel.swift in Sources */,
 				CECA3AB9268E0E5200AAA173 /* User.swift in Sources */,
 				CECA3A87267B9D8500AAA173 /* GitAcademy.xcdatamodeld in Sources */,
 				CE788157268E1F7900CB42F7 /* NetworkRequest+User.swift in Sources */,
 				CECA3ABB268E0EBE00AAA173 /* Repository.swift in Sources */,
 				CECA3AB4268758F200AAA173 /* HomeViewController.swift in Sources */,
 				CE7881652697566E00CB42F7 /* UserViewModel.swift in Sources */,
-				CE78815C2694B38000CB42F7 /* UserProfile.swift in Sources */,
+				CE78816A269788E700CB42F7 /* RepositoriesViewModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

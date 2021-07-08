@@ -5,12 +5,14 @@
 //  Created by Arvydas Klimavicius on 2021-07-08.
 //
 
-import Foundation
+import UIKit
 
 final class UserViewModel {
     
     private var username: String?
     private var login: String?
+    private var followers: Int?
+    private var following: Int?
     
     var userFetchCompletion: (() -> Void)?
     
@@ -25,6 +27,15 @@ final class UserViewModel {
     func getLogin() -> String? {
         login
     }
+    
+    func getFollowers() -> Int? {
+        followers
+    }
+    
+    func getFollowing() -> Int? {
+        following
+    }
+    
 }
 
 extension UserViewModel {
@@ -37,9 +48,9 @@ extension UserViewModel {
                     let user = networkResponse.object
                     self?.username = user.name
                     self?.login = user.login
+                    self?.followers = user.followers
+                    self?.following = user.following
                     self?.userFetchCompletion?()
-                    print("🟢 Login name: \(user.login) User name: \(user.name)")
-                    print("\(user)")
                 }
             case .failure(let error):
                 print(" 🔴Failed to get user \(error.localizedDescription)")

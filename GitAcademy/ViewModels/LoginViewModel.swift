@@ -10,8 +10,6 @@ import AuthenticationServices
 
 final class LoginViewModel: NSObject {
     
-//    private let userViewModel = UserViewModel()
-    
     var completion: (() -> Void)?
     
     func loginTapped() {
@@ -37,8 +35,6 @@ final class LoginViewModel: NSObject {
                 switch result {
                 case .success:
                     self?.completion?()
-//                    self?.userViewModel.start()
-                    //TO DO need to show home vc...
                 case .failure(let error):
                     print("🔴 Failed to exchange token \(error)")
                 }
@@ -51,7 +47,6 @@ final class LoginViewModel: NSObject {
             print("🔴 Failed to start ASWebAuthenticationSession")
         }
     }
-    
 }
 
 extension LoginViewModel: ASWebAuthenticationPresentationContextProviding {
